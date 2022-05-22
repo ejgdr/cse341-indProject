@@ -35,9 +35,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-exports.__esModule = true;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 // let books = require('./data')
-var db_1 = require("../db");
+var db_1 = __importDefault(require("../db"));
 var mutation = {
     addBook: function (_a, context) {
         var title = _a.title, author = _a.author, description = _a.description;
@@ -47,7 +50,7 @@ var mutation = {
                 switch (_b.label) {
                     case 0:
                         _b.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, db_1["default"].books.createBook({ title: title, author: author, description: description })
+                        return [4 /*yield*/, db_1.default.books.createBook({ title: title, author: author, description: description })
                             // const book = { id: `${books.length+1}`, title, author, description }
                             // books.push(book)
                         ];
@@ -80,7 +83,7 @@ var mutation = {
                 switch (_b.label) {
                     case 0:
                         _b.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, db_1["default"].books.updateBook(id, { title: title, author: author, description: description })];
+                        return [4 /*yield*/, db_1.default.books.updateBook(id, { title: title, author: author, description: description })];
                     case 1:
                         book = _b.sent();
                         if (!book) {
@@ -115,7 +118,7 @@ var mutation = {
                 switch (_b.label) {
                     case 0:
                         _b.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, db_1["default"].books.deleteBook(id)];
+                        return [4 /*yield*/, db_1.default.books.deleteBook(id)];
                     case 1:
                         book = _b.sent();
                         if (!book) {
@@ -143,4 +146,4 @@ var mutation = {
         });
     }
 };
-exports["default"] = mutation;
+exports.default = mutation;

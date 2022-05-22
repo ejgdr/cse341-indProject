@@ -10,10 +10,13 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-exports.__esModule = true;
-exports.schema = void 0;
-var schema_1 = require("./schema");
-var query_1 = require("./query");
-var mutation_1 = require("./mutation");
-var resolvers = __assign(__assign({}, query_1["default"]), mutation_1["default"]);
-exports.schema = schema_1["default"];
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.schema = exports.resolver = void 0;
+var schema_1 = __importDefault(require("./schema"));
+var query_1 = __importDefault(require("./query"));
+var mutation_1 = __importDefault(require("./mutation"));
+exports.resolver = __assign(__assign({}, query_1.default), mutation_1.default);
+exports.schema = schema_1.default;

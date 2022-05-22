@@ -35,16 +35,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-exports.__esModule = true;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 // const booksData = require('./data')
-var db_1 = require("../db/");
+var db_1 = __importDefault(require("../db/"));
 var query = {
     books: function (_a, context) {
         var limit = _a.limit;
         return __awaiter(void 0, void 0, void 0, function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
-                    case 0: return [4 /*yield*/, db_1["default"].books.getAllBooks(limit)];
+                    case 0: return [4 /*yield*/, db_1.default.books.getAllBooks(limit)];
                     case 1: 
                     // return limit ? booksData.slice(0, limit) : booksData;
                     return [2 /*return*/, _b.sent()];
@@ -57,7 +60,7 @@ var query = {
         return __awaiter(void 0, void 0, void 0, function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
-                    case 0: return [4 /*yield*/, db_1["default"].books.getBookById(id)];
+                    case 0: return [4 /*yield*/, db_1.default.books.getBookById(id)];
                     case 1: 
                     // return booksData.find(book => book.id === id);
                     return [2 /*return*/, _b.sent()];
@@ -66,4 +69,4 @@ var query = {
         });
     }
 };
-exports["default"] = query;
+exports.default = query;

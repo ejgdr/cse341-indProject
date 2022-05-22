@@ -35,13 +35,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-exports.__esModule = true;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteBook = exports.updateBook = exports.createBook = exports.getBookById = exports.getAllBooks = void 0;
-var books_1 = require("./books");
+var books_1 = __importDefault(require("./books"));
 var getAllBooks = function (limit) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, books_1["default"].find({}).limit(limit)];
+            case 0: return [4 /*yield*/, books_1.default.find({}).limit(limit)];
             case 1: return [2 /*return*/, _a.sent()];
         }
     });
@@ -50,7 +53,7 @@ exports.getAllBooks = getAllBooks;
 var getBookById = function (id) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, books_1["default"].findById(id)];
+            case 0: return [4 /*yield*/, books_1.default.findById(id)];
             case 1: return [2 /*return*/, _a.sent()];
         }
     });
@@ -61,7 +64,7 @@ var createBook = function (_a) {
     return __awaiter(void 0, void 0, void 0, function () {
         return __generator(this, function (_b) {
             switch (_b.label) {
-                case 0: return [4 /*yield*/, books_1["default"].create({ title: title, description: description, author: author })];
+                case 0: return [4 /*yield*/, books_1.default.create({ title: title, description: description, author: author })];
                 case 1: return [2 /*return*/, _b.sent()];
             }
         });
@@ -82,7 +85,7 @@ var updateBook = function (id, _a) {
                         update.description = description;
                     if (author)
                         update.author = author;
-                    return [4 /*yield*/, books_1["default"].findByIdAndUpdate(id, update)];
+                    return [4 /*yield*/, books_1.default.findByIdAndUpdate(id, update)];
                 case 1: return [2 /*return*/, _b.sent()];
             }
         });
@@ -92,7 +95,7 @@ exports.updateBook = updateBook;
 var deleteBook = function (id) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, books_1["default"].findByIdAndDelete(id)];
+            case 0: return [4 /*yield*/, books_1.default.findByIdAndDelete(id)];
             case 1: return [2 /*return*/, _a.sent()];
         }
     });
