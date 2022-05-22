@@ -2,13 +2,13 @@
   "name": "mathprogress",
   "version": "1.0.0",
   "description": "Follow the progress over math concepts before graduating from High School",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node server.js",
+    "start": "node dist/server.js",
     "build:watch": "tsc --watch",
-    "dev": "nodemon server.js"
+    "dev": "nodemon dist/server.js"
   },
   "repository": {
     "type": "git",
