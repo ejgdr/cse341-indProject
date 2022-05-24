@@ -2,7 +2,7 @@
   "name": "mathprogress",
   "version": "1.0.0",
   "description": "Follow the progress over math concepts before graduating from High School",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -28,7 +28,7 @@
     "graphql": "^15.8.0",
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.4",
-    "mongosh": "^0.0.1"
+    "typescript": "^4.6.4"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
@@ -37,7 +37,6 @@
     "@types/express-graphql": "^0.9.0",
     "@types/graphql": "^14.5.0",
     "@types/mongoose": "^5.11.97",
-    "nodemon": "^2.0.16",
-    "typescript": "^4.6.4"
+    "nodemon": "^2.0.16"
   }
 }
